@@ -1,6 +1,5 @@
 *{
-    background-color:forestgreen;
-    
+font-family: 'Courier New', Courier, monospace;
 }
 input {
     padding: 8px;
@@ -16,3 +15,43 @@ input {
     border-radius: 4px;
     text-align: center;
   }
+  body {
+    background-image: url("รูปภาพ/1326370.png"); /* ใส่ URL รูปที่ต้องการ */
+    background-size: cover; /* ขยายภาพให้เต็มพื้นที่ */
+    background-position: center; /* จัดให้อยู่ตรงกลาง */
+    background-attachment: fixed; /* ภาพจะอยู่กับที่เมื่อเลื่อนหน้า */
+  }
+  * {
+    border: 2px solid #4CAF50;
+    padding: 10px;
+   border-radius: 10px;
+    width: auto;
+    height: auto;
+    font-size: auto;
+    resize: none; /* ไม่ให้ผู้ใช้ปรับขนาด */
+    background-color: #f9f9f9;
+  }
+ /* สำหรับมือถือ */
+@media (min-width: 672px) {
+  body {
+      
+  h1 {
+      font-size: 24px; /* ปรับขนาดฟอนต์ */
+  }
+}
+
+/* สำหรับแท็บเล็ต */
+@media (min-width: 672px) and (max-width: 1024px) {
+  
+  h1 {
+      font-size: 28px; /* ปรับขนาดฟอนต์ */
+  }
+}
+
+/* สำหรับคอมพิวเตอร์ */
+@media (min-width: 1025px) {
+  
+  h1 {
+      font-size: 32px; /* ปรับขนาดฟอนต์ */
+  }
+}

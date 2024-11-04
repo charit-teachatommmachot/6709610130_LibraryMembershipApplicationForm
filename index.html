@@ -11,14 +11,46 @@
     <form>
         <!-- ชื่อภาษาไทย -->
         <label for="thai-name">ชื่อ - นามสกุล (ภาษาไทย) &nbsp;:</label>
-        &nbsp; &nbsp;<input type="text" id="thai-name" name="thaiName" required>
+        <input type="text" id="thai-name" name="thaiName" required>
       <br><br><br>
         <!-- ชื่อภาษาอังกฤษ -->
         <label for="english-name">ชื่อ - นามสกุล (ภาษาอังกฤษ):</label>
         <input type="text" id="english-name" name="englishName" required>
         <br><br><br>
-        <label for="email">Email:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- email -->
+        <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
+        <br><br><br>
+        <!-- รหัสนักศึกษา-->
+        <label for="numberid">รหัสนักศึกษา</label>
+        <input type="text" maxlength="10" required>
+        <br><br><br>
+        <!-- คณะที่ศึกษา -->
+        <label for="คณะ/สาขา">คณะที่ศึกษา</label>
+        <input type="text" required>
+        <br><br><br>
+        <!-- วันเกิด -->
+        <label for="BD">วันเกิด</label>
+        <input type="date"  required>
+        <script>
+          function validateDate(input) {
+              const date = new Date(input.value);
+              const year = date.getFullYear();
+              if (year < 1900 || year > 2100) {
+                  alert('กรุณาใส่ปีที่ถูกต้อง (ปีต้องอยู่ระหว่าง 1900 ถึง 2100)');
+                  input.value = ''; // ล้างค่าที่กรอก
+              }
+          }
+          </script>
+        <br><br><br>
+        <!-- book -->
+        <label for="book">หนังสือที่สนใจ</label>
+        <input type="text" required>
+        <br><br><br>
+        <!-- เงื่อนไขการให้บริการ -->
+        <label for="เงื่อนไข">ความต้องการรับข่าวสารข้อมูลของห้องสมุดทางอีเมลหรือไม่</label>
+        <br><br><br>
+        <input type="radio" required>ยินยอม
         <br><br><br>
          <!-- เพศ -->
       <label for="gender">เพศ:</label>
@@ -28,7 +60,9 @@
         <option value="female">หญิง</option>
         <option value="other">อื่น ๆ</option>
       </select>
-
+      <br><br><br>
+      <!-- submit -->
+      <input type="submit" value="บันทึกข้อมูล">
       </form>
       
 </body>
